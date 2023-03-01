@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LikeButton</title>
+    <link rel="stylesheet" href="LikeButton.css">
+</head>
+<body>
+<div style="display: flex;justify-content: center;height: 100px;align-items: center">
+    <button class="LikeButton" onclick="onclickhandler()" >
+        <img src="heart.png" height="10rem"> Like
+    </button>
+</div>
+<script>
+    let onclickhandler = () => {
+            return new Promise((resolve, reject) => {
+                document.body.append("Processing...")
+                setTimeout(
+                    () => {
+                        resolve(
+                            {
+                                data:
+                                    {
+                                        "likes": 30,
+                                        "postId": 1001
+                                    }
+                            }
+                        );
+                        document.body.append("\nReceived Data")
+                    },
+                    5000)
+            })
+        }
+</script>
+</body>
+</html>

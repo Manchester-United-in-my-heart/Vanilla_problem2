@@ -1,0 +1,14 @@
+.LikeButton{
+}
+.LikeButton:hover{
+    background-color: red;
+    color:red;
+    border:red;
+}
+.LikeButton:active img{
+    background: white;
+}
+.LikeButton:active{
+    color: white;
+    background-color: red;
+}
